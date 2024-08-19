@@ -1,7 +1,4 @@
-# 1. What is the difference between `Component` and `PureComponent`?
-### Give an example where it might break my app.
-
-**ANSWER:**
+# 1. What is the difference between `Component` and `PureComponent`? Give an example where it might break my app.
 
 - **Regular Component:**  
   A regular `Component` does not implement `shouldComponentUpdate` by default. This means that any change in props, state, or a re-render of its parent component will cause the component to re-render, regardless of whether the change actually affects the output.
@@ -126,13 +123,9 @@ export default App;
 
 # 2. `Context` + `ShouldComponentUpdate` might be dangerous. Why is that?
 
-**ANSWER:**
-
 Using ShouldComponentUpdate in a component that consumes context can be risky because it might prevent the component from re-rendering when the context changes, leading to stale or outdated values being used. This can cause misalignment between the component's state and context, resulting in unpredictable behavior. Additionally, it complicates debugging, as it becomes harder to determine why a component isn't updating as expected. The small performance gains from using ShouldComponentUpdate might not be worth the potential for subtle, difficult-to-trace bugs.
 
 # 3. Describe 3 ways to pass information from a component to its PARENT.
-
-**ANSWER:**
 
 ### Examples:
 
@@ -339,8 +332,6 @@ export default ParentComponent;
 
 # 4. Give 2 ways to prevent components from re-rendering.
 
-**ANSWER:**
-
 - **React.memo:**  
 React.memo prevents re-renders by performing a shallow comparison of the component’s props. If the props haven’t changed, the component will not re-render.
 
@@ -418,8 +409,6 @@ export default ParentComponent;
 
 # 5. What is a fragment and why do we need it? Give an example where it might break my app.
 
-**ANSWER:**
-
 When you return multiple elements from a component, React requires them to be wrapped in a single parent element. This often leads developers to use unnecessary <div> or other elements just to satisfy this requirement. However, these extra elements can clutter the DOM and might cause issues with styling, layout, or accessibility.
 
 Fragment solves this problem by allowing you to group multiple elements together without adding any extra elements to the DOM. This keeps the DOM structure clean and avoids unwanted side effects.
@@ -447,8 +436,6 @@ Fragment solves this problem by allowing you to group multiple elements together
 ```
 
 # 6. Give 3 examples of the HOC pattern.
-
-**ANSWER:**
 
 The Higher-Order Component (HOC) pattern in React.js is a powerful tool for reusing component logic. An HOC is a function that takes a component as an argument and returns a new component with additional props or behavior.
 
@@ -546,8 +533,6 @@ const SafeComponent = withErrorBoundary(ComponentThatMayFail, ErrorFallback);
 
 # 7. What's the difference in handling exceptions in promises, callbacks and async...await?
 
-**ANSWER:**
-
 #### 1. Promises
 Errors in promises can be caught using .catch().
 
@@ -622,8 +607,6 @@ doSomething((err, result) => {
 
 # 8. How many arguments does setState take and why is it async.
 
-**ANSWER:**
-
 SetState takes 2 arguments.
 
 - **New state value (or a function to update state):**  
@@ -639,8 +622,6 @@ This asynchronous nature also allows React to control and prioritize the update 
 
 
 # 9. List the steps needed to migrate a Class to Function Component.
-
-**ANSWER:**
 
 #### 1. Replace the render method with the function body itself.
 #### 2. Use props instead of this.props directly.
@@ -708,8 +689,6 @@ function MyComponent(props) {
 ```
 
 # 10. List a few ways styles can be used with components.
-
-**ANSWER:**
 
 - **Inline Styles:**
 Styles are defined directly within the component using a style attribute, passed as a JavaScript object.
