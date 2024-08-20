@@ -1,5 +1,5 @@
 import React from 'react';
-import AutoComplete from './components/Autocomplete/Autocomplete';
+import AutoComplete from './components/AutoComplete/AutoComplete';
 import './components/Autocomplete/Autocomplete.css';
 import './index.css';
 
@@ -10,7 +10,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <h1>Autocomplete examples</h1>
+      <h1>AutoComplete examples</h1>
       <AutoComplete onSelect={handleSelect} />
     </div>
   );

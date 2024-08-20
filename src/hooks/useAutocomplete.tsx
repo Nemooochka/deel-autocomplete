@@ -24,7 +24,7 @@ interface UseAutoCompleteReturn {
   loading: boolean;
 }
 
-export const useAutocomplete = ({ query, onSelect }: UseAutoCompleteProps): UseAutoCompleteReturn => {
+export const useAutoComplete = ({ query, onSelect }: UseAutoCompleteProps): UseAutoCompleteReturn => {
   const [inputValue, setInputValue] = useState(query);
   const [filteredSuggestions, setFilteredSuggestions] = useState<Suggestion[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
