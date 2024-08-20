@@ -1,6 +1,6 @@
 import React from 'react';
-import AutoComplete from './components/AutoComplete/AutoComplete';
-import './components/Autocomplete/Autocomplete.css';
+import AutoComplete from './components/Autocomplete/AutoComplete';
+import './components/AutoComplete/AutoComplete.css';
 import './index.css';
 
 const App: React.FC = () => {
