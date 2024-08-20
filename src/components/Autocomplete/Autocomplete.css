@@ -1,0 +1,74 @@
+.app {
+  padding: 15px;
+}
+
+.autocomplete-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.autocomplete-block {
+  width: 45%;
+  min-width: 300px;
+}
+
+.autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.suggestions {
+  position: absolute;
+  width: 100%;
+  max-height: 150px;
+  margin: 6px 0 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  list-style: none;
+  overflow-y: auto;
+  z-index: 3;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:not(.no-suggestions, .error-message, .loading-message):hover {
+  background-color: #c4b1f9;
+}
+
+.suggestions li.highlighted {
+  background-color: #e0e0e0;
+}
+
+.suggestions .loading-message,
+.suggestions .error-message,
+.suggestions .no-suggestions {
+  padding: 8px;
+  text-align: center;
+  color: gray;
+  cursor: initial;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .autocomplete-block {
+    width: 100%;
+  }
+}
