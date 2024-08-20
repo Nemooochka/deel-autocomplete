@@ -1,10 +1,10 @@
 ## Hi Deel Team,
 
 ### There are two versions of Autocomplete:
-1. Autocomplete with real API fetching data on each keystroke.
-2. Autocomplete with real API fetching data once on initial loading.
+1. `Real-time API Autocomplete`: Fetches data from the API with each keystroke.
+2. `Initial Load API Autocomplete`: Fetches all data from the API once during the initial load.
 
-### How to run a project:
-* You should have Node.js v.18+
-1. Run 'npm i' in the root folder
-2. Run 'npm run dev' in the root folder
+### To run the project:
+* Ensure you have Node.js v18 or higher.
+1. Navigate to the root folder and run npm i to install dependencies.
+2. Then, execute npm run dev to start the development server.
