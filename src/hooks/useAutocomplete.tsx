@@ -106,6 +106,8 @@ export const useAutocomplete = ({ query, onSelect }: UseAutoCompleteProps): UseA
           handleClick(filteredSuggestions[highlightedIndex]);
         } else if (filteredSuggestions.length > 0) {
           handleClick(filteredSuggestions[0]); // Select first suggestion if none are highlighted
+        } else {
+          setShowSuggestions(false); // Hide suggestions if no match is found
         }
       }
     },

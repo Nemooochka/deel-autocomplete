@@ -107,6 +107,8 @@ export const useAutocompleteLoadingOnce = ({ query, onSelect }: UseAutoCompleteP
           handleClick(filteredSuggestions[highlightedIndex]);
         } else if (filteredSuggestions.length > 0) {
           handleClick(filteredSuggestions[0]); // Select first suggestion if none are highlighted
+        } else {
+          setShowSuggestions(false); // Hide suggestions if no match is found
         }
       }
     },
@@ -145,7 +147,7 @@ export const useAutocompleteLoadingOnce = ({ query, onSelect }: UseAutoCompleteP
 
   // Render suggestions list
   const renderSuggestions = useCallback(() => {
-    if (loading) {
+    if (loading && inputValue) {
       return (
         <ul className="suggestions" ref={suggestionsRef} aria-expanded={showSuggestions}>
           <li className="loading-message">
@@ -154,7 +156,7 @@ export const useAutocompleteLoadingOnce = ({ query, onSelect }: UseAutoCompleteP
         </ul>
       );
     }
-    if (error) {
+    if (error && inputValue) {
       return (
         <ul className="suggestions" ref={suggestionsRef} aria-expanded={showSuggestions}>
           <li className="error-message">
