@@ -6,5 +6,5 @@
 
 ### To run the project:
 * Ensure you have Node.js v18 or higher.
-1. Navigate to the root folder and run npm i to install dependencies.
-2. Then, execute npm run dev to start the development server.
+1. Navigate to the root folder and run `npm i` to install dependencies.
+2. Then, execute `npm run dev` to start the development server.
