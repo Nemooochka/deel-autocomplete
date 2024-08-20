@@ -1,6 +1,6 @@
 ## Hi Deel Team,
 
-### There are two version of Autocomplete:
+### There are two versions of Autocomplete:
 1. Autocomplete with real API fetching data on each keystroke.
 2. Autocomplete with real API fetching data once on initial loading.
 
