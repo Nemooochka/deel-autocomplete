@@ -1,7 +1,7 @@
 import React from 'react';
 import AutoComplete from './components/Autocomplete/Autocomplete';
 import './components/Autocomplete/Autocomplete.css';
-import './index.css'
+import './index.css';
 
 const App: React.FC = () => {
   const handleSelect = (value: string) => {

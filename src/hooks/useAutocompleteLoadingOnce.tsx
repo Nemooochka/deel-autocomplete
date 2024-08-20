@@ -69,9 +69,7 @@ export const useAutocompleteLoadingOnce = ({ query, onSelect }: UseAutoCompleteP
       setInputValue(userInput);
 
       if (userInput) {
-        const filtered = allSuggestions.filter((suggestion) =>
-          suggestion.name.toLowerCase().includes(userInput.toLowerCase())
-        );
+        const filtered = allSuggestions.filter((suggestion) => suggestion.name.toLowerCase().includes(userInput.toLowerCase()));
         setFilteredSuggestions(filtered);
         setShowSuggestions(true);
       } else {
@@ -190,7 +188,6 @@ export const useAutocompleteLoadingOnce = ({ query, onSelect }: UseAutoCompleteP
     }
     return null;
   }, [inputValue, loading, error, showSuggestions, filteredSuggestions, highlightedIndex, handleClick, getHighlightedText]);
-
 
   return {
     inputValue,
